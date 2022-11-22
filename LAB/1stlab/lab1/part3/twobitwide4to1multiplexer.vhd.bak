@@ -1,0 +1,7 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY twobitwide4to1multiplexer IS
+
+
+END twobitwide4to1multiplexer;

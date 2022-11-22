@@ -1,0 +1,138 @@
+-- Problem no 5
+-- Developer: Shaibal Saha
+--EMail :shaibalsaha@oakland.edu
+
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+ENTITY sevensegmentdecoderusing2bitwidemux IS
+PORT(
+	SW	: IN	STD_LOGIC_VECTOR(9 DOWNTO 0);
+	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+	
+	HEX0: OUT STD_LOGIC_VECTOR(0 TO 6);
+	HEX1: OUT STD_LOGIC_VECTOR(0 TO 6);
+	HEX2: OUT STD_LOGIC_VECTOR(0 TO 6);
+	HEX3: OUT STD_LOGIC_VECTOR(0 TO 6)
+
+);
+END sevensegmentdecoderusing2bitwidemux;
+
+ARCHITECTURE Behavior OF sevensegmentdecoderusing2bitwidemux IS 
+	COMPONENT twobitwide4to1multiplexer
+		PORT ( s, u, v, w, x	: IN	STD_LOGIC_VECTOR(1 DOWNTO 0); 
+		 m	: OUT	STD_LOGIC_VECTOR(1 DOWNTO 0));
+	END COMPONENT;
+
+	
+	COMPONENT sevensegmentdecoder
+		PORT ( c	: IN	STD_LOGIC_VECTOR(1 DOWNTO 0); 
+				 Display3	: OUT	STD_LOGIC_VECTOR(0 TO 6);
+				 Display2: OUT STD_LOGIC_VECTOR(0 TO 6);
+				 Display1: OUT STD_LOGIC_VECTOR(0 TO 6);
+				 Display0: OUT STD_LOGIC_VECTOR(0 TO 6));
+		END COMPONENT;
+		
+		SIGNAL M0 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+	
+	BEGIN
+		-- Get the output of 4*1 and use this for 7 sengment 
+		U3: twobitwide4to1multiplexer PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(5 DOWNTO 4), SW(3 DOWNTO 2), SW(1 DOWNTO 0), M0);
+		-- Four 7 segment 
+		H3: sevensegmentdecoder PORT MAP (M0, HEX3,HEX2,HEX1,HEX0);
+		LEDR <= SW;
+
+END Behavior;
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY twobitwide4to1multiplexer IS
+--input and output 
+	PORT(
+	  s: IN STD_LOGIC_VECTOR(1 DOWNTO 0); 	--input select in Mux
+	  u: IN STD_LOGIC_VECTOR(1 DOWNTO 0);	--input u
+	  v: IN STD_LOGIC_VECTOR(1 DOWNTO 0);	--input w
+	  w: IN STD_LOGIC_VECTOR(1 DOWNTO 0);	--input x
+	  x: IN STD_LOGIC_VECTOR(1 DOWNTO 0);	--input x
+	  
+	  m: OUT STD_LOGIC_VECTOR(1 DOWNTO 0));	--output m
+END twobitwide4to1multiplexer;
+
+ARCHITECTURE BEHAVIOR OF twobitwide4to1multiplexer IS
+BEGIN
+	m(0)  <=      u(0) when (s(0)='0' AND s(1)='0') 
+      else v(0) when  (s(0)='0' AND s(1)='1')
+		 else w(0) when  (s(0)='1' AND s(1)='0') 
+		 else x(0);
+		 
+		 
+	m(1)  <=      u(1) when (s(0)='0' AND s(1)='0') 
+      else v(1) when  (s(0)='0' AND s(1)='1')
+		 else w(1) when  (s(0)='1' AND s(1)='0') 
+		 else x(1);
+	
+  
+
+END BEHAVIOR;
+
+
+-- THis is four substance of 4 7 segment display
+
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+ENTITY sevensegmentdecoder IS
+PORT(
+	C: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	--C0: IN STD_LOGIC;
+	Display3: OUT STD_LOGIC_VECTOR(0 TO 6);
+	Display2: OUT STD_LOGIC_VECTOR(0 TO 6);
+	Display1: OUT STD_LOGIC_VECTOR(0 TO 6);
+	Display0: OUT STD_LOGIC_VECTOR(0 TO 6)
+);
+END sevensegmentdecoder;
+
+ARCHITECTURE BEHAVIOR OF sevensegmentdecoder IS
+
+BEGIN
+
+
+	process(C)
+	
+	begin
+	--Hex3 output
+		case C IS
+			when "00" => Display3 <= "1000010";
+			when "01" => Display3 <= "0110000";
+			when "10" => Display3 <= "1111001";
+			when "11" => Display3 <= "0000001";
+			when others => Display3 <= "0000001";
+		end case;
+		--Hex2 output
+		case C IS
+			when "00" => Display2 <= "0110000";
+			when "01" => Display2 <= "1111001";
+			when "10" => Display2 <= "0000001";
+			when "11" => Display2 <= "1000010";
+			when others => Display2 <= "0000001";
+		end case;
+		--Hex1 output
+		case C IS
+			when "00" => Display1 <= "1111001";
+			when "01" => Display1 <= "0000001";
+			when "10" => Display1 <= "1000010";
+			when "11" => Display1 <= "0110000";
+			when others => Display1 <= "0000001";
+		end case;
+		--Hex0 output
+		case C IS
+			when "00" => Display0 <= "0000001";
+			when "01" => Display0 <= "1000010";
+			when "10" => Display0 <= "0110000";
+			when "11" => Display0 <= "1111001";
+			when others => Display0 <= "0000001";
+		end case;
+	end process;
+	
+
+END BEHAVIOR;

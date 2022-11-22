@@ -1,0 +1,402 @@
+|bcdsum
+X[0] => errorcheck:er1.error[3]
+X[0] => sevensegment:u1.c[3]
+X[0] => ripplecarryadder:u3.a[0]
+X[1] => errorcheck:er1.error[2]
+X[1] => sevensegment:u1.c[2]
+X[1] => ripplecarryadder:u3.a[1]
+X[2] => errorcheck:er1.error[1]
+X[2] => sevensegment:u1.c[1]
+X[2] => ripplecarryadder:u3.a[2]
+X[3] => errorcheck:er1.error[0]
+X[3] => sevensegment:u1.c[0]
+X[3] => ripplecarryadder:u3.a[3]
+Y[0] => errorcheck:er2.error[3]
+Y[0] => sevensegment:u2.c[3]
+Y[0] => ripplecarryadder:u3.b[0]
+Y[1] => errorcheck:er2.error[2]
+Y[1] => sevensegment:u2.c[2]
+Y[1] => ripplecarryadder:u3.b[1]
+Y[2] => errorcheck:er2.error[1]
+Y[2] => sevensegment:u2.c[1]
+Y[2] => ripplecarryadder:u3.b[2]
+Y[3] => errorcheck:er2.error[0]
+Y[3] => sevensegment:u2.c[0]
+Y[3] => ripplecarryadder:u3.b[3]
+cin => ripplecarryadder:u3.cin
+HEX5[6] <= sevensegment:u1.Display[6]
+HEX5[5] <= sevensegment:u1.Display[5]
+HEX5[4] <= sevensegment:u1.Display[4]
+HEX5[3] <= sevensegment:u1.Display[3]
+HEX5[2] <= sevensegment:u1.Display[2]
+HEX5[1] <= sevensegment:u1.Display[1]
+HEX5[0] <= sevensegment:u1.Display[0]
+HEX3[6] <= sevensegment:u2.Display[6]
+HEX3[5] <= sevensegment:u2.Display[5]
+HEX3[4] <= sevensegment:u2.Display[4]
+HEX3[3] <= sevensegment:u2.Display[3]
+HEX3[2] <= sevensegment:u2.Display[2]
+HEX3[1] <= sevensegment:u2.Display[1]
+HEX3[0] <= sevensegment:u2.Display[0]
+HEX1[6] <= binarytodecimal:u5.HEX1[6]
+HEX1[5] <= binarytodecimal:u5.HEX1[5]
+HEX1[4] <= binarytodecimal:u5.HEX1[4]
+HEX1[3] <= binarytodecimal:u5.HEX1[3]
+HEX1[2] <= binarytodecimal:u5.HEX1[2]
+HEX1[1] <= binarytodecimal:u5.HEX1[1]
+HEX1[0] <= binarytodecimal:u5.HEX1[0]
+HEX0[6] <= binarytodecimal:u5.HEX0[6]
+HEX0[5] <= binarytodecimal:u5.HEX0[5]
+HEX0[4] <= binarytodecimal:u5.HEX0[4]
+HEX0[3] <= binarytodecimal:u5.HEX0[3]
+HEX0[2] <= binarytodecimal:u5.HEX0[2]
+HEX0[1] <= binarytodecimal:u5.HEX0[1]
+HEX0[0] <= binarytodecimal:u5.HEX0[0]
+err <= err.DB_MAX_OUTPUT_PORT_TYPE
+carry <= ripplecarryadder:u3.COUT
+
+
+|bcdsum|errorcheck:er1
+error[3] => ~NO_FANOUT~
+error[2] => error_output.IN0
+error[1] => error_output.IN0
+error[0] => error_output.IN1
+error[0] => error_output.IN1
+error_output <= error_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|errorcheck:er2
+error[3] => ~NO_FANOUT~
+error[2] => error_output.IN0
+error[1] => error_output.IN0
+error[0] => error_output.IN1
+error[0] => error_output.IN1
+error_output <= error_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|sevensegment:u1
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN1
+c[3] => Display.IN1
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN0
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+Display[6] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|sevensegment:u2
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN1
+c[3] => Display.IN1
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN0
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+Display[6] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3
+a[0] => fulladder:u1.x
+a[1] => fulladder:u2.x
+a[2] => fulladder:u3.x
+a[3] => fulladder:u4.x
+b[0] => fulladder:u1.y
+b[1] => fulladder:u2.y
+b[2] => fulladder:u3.y
+b[3] => fulladder:u4.y
+cin => fulladder:u1.ci
+S[0] <= fulladder:u1.sout
+S[1] <= fulladder:u2.sout
+S[2] <= fulladder:u3.sout
+S[3] <= fulladder:u4.sout
+COUT <= fulladder:u4.co
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u1
+x => m1.IN0
+y => m1.IN1
+y => mux_2_1:u1.c
+ci => sout.IN1
+ci => mux_2_1:u1.d
+co <= mux_2_1:u1.m
+sout <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u1|mux_2_1:u1
+sel => m.IN0
+sel => m.IN0
+c => m.IN1
+d => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u2
+x => m1.IN0
+y => m1.IN1
+y => mux_2_1:u1.c
+ci => sout.IN1
+ci => mux_2_1:u1.d
+co <= mux_2_1:u1.m
+sout <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u2|mux_2_1:u1
+sel => m.IN0
+sel => m.IN0
+c => m.IN1
+d => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u3
+x => m1.IN0
+y => m1.IN1
+y => mux_2_1:u1.c
+ci => sout.IN1
+ci => mux_2_1:u1.d
+co <= mux_2_1:u1.m
+sout <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u3|mux_2_1:u1
+sel => m.IN0
+sel => m.IN0
+c => m.IN1
+d => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u4
+x => m1.IN0
+y => m1.IN1
+y => mux_2_1:u1.c
+ci => sout.IN1
+ci => mux_2_1:u1.d
+co <= mux_2_1:u1.m
+sout <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|ripplecarryadder:u3|fulladder:u4|mux_2_1:u1
+sel => m.IN0
+sel => m.IN0
+c => m.IN1
+d => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|binarytodecimal:u5
+SW[3] => comparator:u1.a[3]
+SW[3] => binarytodecimalconversion:u2.binary[3]
+SW[3] => fourbitwide2to1mux:u3.x[3]
+SW[2] => comparator:u1.a[2]
+SW[2] => binarytodecimalconversion:u2.binary[2]
+SW[2] => fourbitwide2to1mux:u3.x[2]
+SW[1] => comparator:u1.a[1]
+SW[1] => binarytodecimalconversion:u2.binary[1]
+SW[1] => fourbitwide2to1mux:u3.x[1]
+SW[0] => comparator:u1.a[0]
+SW[0] => binarytodecimalconversion:u2.binary[0]
+SW[0] => fourbitwide2to1mux:u3.x[0]
+carry_cal => znew.IN1
+carry_cal => binarytodecimalconversion:u2.carry_bit
+HEX0[6] <= sevensegment:u4.Display[6]
+HEX0[5] <= sevensegment:u4.Display[5]
+HEX0[4] <= sevensegment:u4.Display[4]
+HEX0[3] <= sevensegment:u4.Display[3]
+HEX0[2] <= sevensegment:u4.Display[2]
+HEX0[1] <= sevensegment:u4.Display[1]
+HEX0[0] <= sevensegment:u4.Display[0]
+HEX1[6] <= sevensegment:u5.Display[6]
+HEX1[5] <= sevensegment:u5.Display[5]
+HEX1[4] <= sevensegment:u5.Display[4]
+HEX1[3] <= sevensegment:u5.Display[3]
+HEX1[2] <= sevensegment:u5.Display[2]
+HEX1[1] <= sevensegment:u5.Display[1]
+HEX1[0] <= sevensegment:u5.Display[0]
+
+
+|bcdsum|binarytodecimal:u5|comparator:u1
+a[3] => ~NO_FANOUT~
+a[2] => OUTPUT.IN0
+a[1] => OUTPUT.IN0
+a[0] => OUTPUT.IN1
+a[0] => OUTPUT.IN1
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|binarytodecimal:u5|binarytodecimalconversion:u2
+binary[3] => binary_output.IN1
+binary[3] => binary_output.IN1
+binary[3] => binary_output.IN1
+binary[3] => binary_output.IN1
+binary[2] => binary_output.IN0
+binary[2] => binary_output.IN1
+binary[2] => binary_output.IN0
+binary[2] => binary_output.IN1
+binary[2] => binary_output.IN1
+binary[2] => binary_output.IN1
+binary[2] => binary_output.IN0
+binary[2] => binary_output.IN1
+binary[1] => binary_output.IN0
+binary[1] => binary_output.IN1
+binary[1] => binary_output.IN0
+binary[1] => binary_output.IN0
+binary[0] => binary_output.IN1
+binary[0] => binary_output.IN1
+binary[0] => binary_output.IN1
+binary[0] => binary_output.IN0
+carry_bit => binary_output.IN1
+carry_bit => binary_output.IN1
+carry_bit => binary_output.IN1
+binary_output[3] <= binary_output.DB_MAX_OUTPUT_PORT_TYPE
+binary_output[2] <= binary_output.DB_MAX_OUTPUT_PORT_TYPE
+binary_output[1] <= binary_output.DB_MAX_OUTPUT_PORT_TYPE
+binary_output[0] <= binary_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|binarytodecimal:u5|fourbitwide2to1mux:u3
+x[3] => m.IN0
+x[2] => m.IN0
+x[1] => m.IN0
+x[0] => m.IN0
+y[3] => m.IN0
+y[2] => m.IN0
+y[1] => m.IN0
+y[0] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|binarytodecimal:u5|sevensegment:u4
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN1
+c[3] => Display.IN1
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN0
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+Display[6] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcdsum|binarytodecimal:u5|sevensegment:u5
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN1
+c[3] => Display.IN1
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN0
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+Display[6] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+
+

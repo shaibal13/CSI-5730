@@ -1,0 +1,167 @@
+|part1
+clk => tflipflop:TFF_1.clk
+clk => tflipflop:TFF_2.clk
+clk => tflipflop:TFF_3.clk
+clk => tflipflop:TFF_4.clk
+clk => tflipflop:TFF_5.clk
+clk => tflipflop:TFF_6.clk
+clk => tflipflop:TFF_7.clk
+reset => tflipflop:TFF_1.reset
+reset => tflipflop:TFF_2.reset
+reset => tflipflop:TFF_3.reset
+reset => tflipflop:TFF_4.reset
+reset => tflipflop:TFF_5.reset
+reset => tflipflop:TFF_6.reset
+reset => tflipflop:TFF_7.reset
+en => t[1].IN1
+en => tflipflop:TFF_1.t
+en => sevensegment:H0.B[3]
+HEX0[0] <= sevensegment:H0.HEX[0]
+HEX0[1] <= sevensegment:H0.HEX[1]
+HEX0[2] <= sevensegment:H0.HEX[2]
+HEX0[3] <= sevensegment:H0.HEX[3]
+HEX0[4] <= sevensegment:H0.HEX[4]
+HEX0[5] <= sevensegment:H0.HEX[5]
+HEX0[6] <= sevensegment:H0.HEX[6]
+HEX1[0] <= sevensegment:H1.HEX[0]
+HEX1[1] <= sevensegment:H1.HEX[1]
+HEX1[2] <= sevensegment:H1.HEX[2]
+HEX1[3] <= sevensegment:H1.HEX[3]
+HEX1[4] <= sevensegment:H1.HEX[4]
+HEX1[5] <= sevensegment:H1.HEX[5]
+HEX1[6] <= sevensegment:H1.HEX[6]
+q[0] <= tflipflop:TFF_7.q
+q[1] <= <GND>
+q[2] <= tflipflop:TFF_6.q
+q[3] <= tflipflop:TFF_5.q
+q[4] <= tflipflop:TFF_4.q
+q[5] <= tflipflop:TFF_3.q
+q[6] <= tflipflop:TFF_2.q
+q[7] <= tflipflop:TFF_1.q
+
+
+|part1|tflipflop:TFF_1
+clk => q_reg.CLK
+reset => q_reg.ACLR
+t => q_reg.ENA
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|tflipflop:TFF_2
+clk => q_reg.CLK
+reset => q_reg.ACLR
+t => q_reg.ENA
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|tflipflop:TFF_3
+clk => q_reg.CLK
+reset => q_reg.ACLR
+t => q_reg.ENA
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|tflipflop:TFF_4
+clk => q_reg.CLK
+reset => q_reg.ACLR
+t => q_reg.ENA
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|tflipflop:TFF_5
+clk => q_reg.CLK
+reset => q_reg.ACLR
+t => q_reg.ENA
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|tflipflop:TFF_6
+clk => q_reg.CLK
+reset => q_reg.ACLR
+t => q_reg.ENA
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|tflipflop:TFF_7
+clk => q_reg.CLK
+reset => q_reg.ACLR
+t => q_reg.ENA
+q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|sevensegment:H0
+B[0] => Mux0.IN19
+B[0] => Mux1.IN19
+B[0] => Mux2.IN19
+B[0] => Mux3.IN19
+B[0] => Mux4.IN19
+B[0] => Mux5.IN19
+B[0] => Mux6.IN19
+B[1] => Mux0.IN18
+B[1] => Mux1.IN18
+B[1] => Mux2.IN18
+B[1] => Mux3.IN18
+B[1] => Mux4.IN18
+B[1] => Mux5.IN18
+B[1] => Mux6.IN18
+B[2] => Mux0.IN17
+B[2] => Mux1.IN17
+B[2] => Mux2.IN17
+B[2] => Mux3.IN17
+B[2] => Mux4.IN17
+B[2] => Mux5.IN17
+B[2] => Mux6.IN17
+B[3] => Mux0.IN16
+B[3] => Mux1.IN16
+B[3] => Mux2.IN16
+B[3] => Mux3.IN16
+B[3] => Mux4.IN16
+B[3] => Mux5.IN16
+B[3] => Mux6.IN16
+HEX[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|sevensegment:H1
+B[0] => Mux0.IN19
+B[0] => Mux1.IN19
+B[0] => Mux2.IN19
+B[0] => Mux3.IN19
+B[0] => Mux4.IN19
+B[0] => Mux5.IN19
+B[0] => Mux6.IN19
+B[1] => Mux0.IN18
+B[1] => Mux1.IN18
+B[1] => Mux2.IN18
+B[1] => Mux3.IN18
+B[1] => Mux4.IN18
+B[1] => Mux5.IN18
+B[1] => Mux6.IN18
+B[2] => Mux0.IN17
+B[2] => Mux1.IN17
+B[2] => Mux2.IN17
+B[2] => Mux3.IN17
+B[2] => Mux4.IN17
+B[2] => Mux5.IN17
+B[2] => Mux6.IN17
+B[3] => Mux0.IN16
+B[3] => Mux1.IN16
+B[3] => Mux2.IN16
+B[3] => Mux3.IN16
+B[3] => Mux4.IN16
+B[3] => Mux5.IN16
+B[3] => Mux6.IN16
+HEX[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

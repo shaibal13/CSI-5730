@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Students/Desktop/Shaibal/lab3/part1/simulation/qsim
+Epart1
+Z1 w1666666004
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+!i122 12
+R0
+Z9 8part1.vho
+Z10 Fpart1.vho
+l0
+L37 1
+VXhn30ZPNmG4B3D`lc:K>Q2
+!s100 VVV>`52UBf_<Tj_G>G7mQ2
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1666666005
+!i10b 1
+Z13 !s108 1666666005.000000
+Z14 !s90 -work|work|part1.vho|
+Z15 !s107 part1.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 5 part1 0 22 Xhn30ZPNmG4B3D`lc:K>Q2
+!i122 12
+l82
+L55 149
+VhS^>;aC@f3HhOA44TfNM73
+!s100 S4I0=1=zRWGj>joS7>MiB2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Epart1_vhd_vec_tst
+Z18 w1666666003
+R6
+R7
+!i122 13
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L32 1
+VO[e64^z22[IbKO846WReW3
+!s100 O_m?BNMi<j_5C5AIXB0?93
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Apart1_arch
+R6
+R7
+Z23 DEx4 work 17 part1_vhd_vec_tst 0 22 O[e64^z22[IbKO846WReW3
+!i122 13
+l51
+L34 72
+V5EK01[g8]=4if61SYJnOG1
+!s100 o@OGfD>^1kUZFMA]FDGOa1
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 1
+R16
+R17

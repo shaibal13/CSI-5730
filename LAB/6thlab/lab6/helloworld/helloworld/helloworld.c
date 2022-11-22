@@ -1,0 +1,19 @@
+/*
+ * helloworld.c
+ *
+ *  Created on: Nov 15, 2022
+ *      Author: Shaibal Saha
+ *      Email: shaibalsaha@oakland.edu
+ *      lab - 6
+ *      install necessary things and print helloworld in arm ds
+ *
+ */
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	puts("Hello World");
+	return EXIT_SUCCESS;
+}
+

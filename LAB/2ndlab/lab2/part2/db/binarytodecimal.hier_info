@@ -1,0 +1,153 @@
+|binarytodecimal
+SW[3] => comparator:u1.a[3]
+SW[3] => binarytodecimalconversion:u2.binary[3]
+SW[3] => fourbitwide2to1mux:u3.x[3]
+SW[2] => comparator:u1.a[2]
+SW[2] => binarytodecimalconversion:u2.binary[2]
+SW[2] => fourbitwide2to1mux:u3.x[2]
+SW[1] => comparator:u1.a[1]
+SW[1] => binarytodecimalconversion:u2.binary[1]
+SW[1] => fourbitwide2to1mux:u3.x[1]
+SW[0] => comparator:u1.a[0]
+SW[0] => binarytodecimalconversion:u2.binary[0]
+SW[0] => fourbitwide2to1mux:u3.x[0]
+HEX0[6] <= sevensegment:u4.Display[6]
+HEX0[5] <= sevensegment:u4.Display[5]
+HEX0[4] <= sevensegment:u4.Display[4]
+HEX0[3] <= sevensegment:u4.Display[3]
+HEX0[2] <= sevensegment:u4.Display[2]
+HEX0[1] <= sevensegment:u4.Display[1]
+HEX0[0] <= sevensegment:u4.Display[0]
+HEX1[6] <= sevensegment:u5.Display[6]
+HEX1[5] <= sevensegment:u5.Display[5]
+HEX1[4] <= sevensegment:u5.Display[4]
+HEX1[3] <= sevensegment:u5.Display[3]
+HEX1[2] <= sevensegment:u5.Display[2]
+HEX1[1] <= sevensegment:u5.Display[1]
+HEX1[0] <= sevensegment:u5.Display[0]
+
+
+|binarytodecimal|comparator:u1
+a[3] => ~NO_FANOUT~
+a[2] => OUTPUT.IN0
+a[1] => OUTPUT.IN0
+a[0] => OUTPUT.IN1
+a[0] => OUTPUT.IN1
+OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|binarytodecimal|binarytodecimalconversion:u2
+binary[3] => binary_output[3].DATAIN
+binary[2] => binary_output.IN0
+binary[2] => binary_output.IN0
+binary[2] => binary_output.IN1
+binary[2] => binary_output.IN1
+binary[1] => binary_output.IN0
+binary[1] => binary_output.IN1
+binary[1] => binary_output.IN0
+binary[1] => binary_output.IN0
+binary[0] => binary_output.IN1
+binary[0] => binary_output.IN1
+binary[0] => binary_output.IN1
+binary[0] => binary_output.IN1
+binary_output[3] <= binary[3].DB_MAX_OUTPUT_PORT_TYPE
+binary_output[2] <= binary_output.DB_MAX_OUTPUT_PORT_TYPE
+binary_output[1] <= binary_output.DB_MAX_OUTPUT_PORT_TYPE
+binary_output[0] <= binary_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|binarytodecimal|fourbitwide2to1mux:u3
+x[3] => m.IN0
+x[2] => m.IN0
+x[1] => m.IN0
+x[0] => m.IN0
+y[3] => m.IN0
+y[2] => m.IN0
+y[1] => m.IN0
+y[0] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|binarytodecimal|sevensegment:u4
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN1
+c[3] => Display.IN1
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN0
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+Display[6] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|binarytodecimal|sevensegment:u5
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN1
+c[3] => Display.IN1
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[3] => Display.IN0
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN1
+c[2] => Display.IN0
+c[2] => Display.IN0
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[1] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+c[0] => Display.IN1
+Display[6] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= Display.DB_MAX_OUTPUT_PORT_TYPE
+
+

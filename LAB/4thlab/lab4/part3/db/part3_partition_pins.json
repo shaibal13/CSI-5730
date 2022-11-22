@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HEX0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "second[0]",
+					"strict" : false
+				},
+				{
+					"name" : "second[1]",
+					"strict" : false
+				},
+				{
+					"name" : "second[2]",
+					"strict" : false
+				},
+				{
+					"name" : "second[3]",
+					"strict" : false
+				},
+				{
+					"name" : "second[4]",
+					"strict" : false
+				},
+				{
+					"name" : "second[5]",
+					"strict" : false
+				},
+				{
+					"name" : "second[6]",
+					"strict" : false
+				},
+				{
+					"name" : "second[7]",
+					"strict" : false
+				},
+				{
+					"name" : "second[8]",
+					"strict" : false
+				},
+				{
+					"name" : "second[9]",
+					"strict" : false
+				},
+				{
+					"name" : "second[10]",
+					"strict" : false
+				},
+				{
+					"name" : "second[11]",
+					"strict" : false
+				},
+				{
+					"name" : "second[12]",
+					"strict" : false
+				},
+				{
+					"name" : "second[13]",
+					"strict" : false
+				},
+				{
+					"name" : "second[14]",
+					"strict" : false
+				},
+				{
+					"name" : "second[15]",
+					"strict" : false
+				},
+				{
+					"name" : "second[16]",
+					"strict" : false
+				},
+				{
+					"name" : "second[17]",
+					"strict" : false
+				},
+				{
+					"name" : "second[18]",
+					"strict" : false
+				},
+				{
+					"name" : "second[19]",
+					"strict" : false
+				},
+				{
+					"name" : "second[20]",
+					"strict" : false
+				},
+				{
+					"name" : "second[21]",
+					"strict" : false
+				},
+				{
+					"name" : "second[22]",
+					"strict" : false
+				},
+				{
+					"name" : "second[23]",
+					"strict" : false
+				},
+				{
+					"name" : "second[24]",
+					"strict" : false
+				},
+				{
+					"name" : "second[25]",
+					"strict" : false
+				},
+				{
+					"name" : "second[26]",
+					"strict" : false
+				},
+				{
+					"name" : "second[27]",
+					"strict" : false
+				},
+				{
+					"name" : "second[28]",
+					"strict" : false
+				},
+				{
+					"name" : "second[29]",
+					"strict" : false
+				},
+				{
+					"name" : "second[30]",
+					"strict" : false
+				},
+				{
+					"name" : "second[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

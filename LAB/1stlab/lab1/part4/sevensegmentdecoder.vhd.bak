@@ -1,0 +1,26 @@
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+ENTITY sevensegmentdecoder IS
+PORT(
+	C1: IN STD_LOGIC;
+	C2: IN STD_LOGIC;
+	HEX0: OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+
+);
+END sevensegmentdecoder;
+
+ARCHITECTURE BEHAVIOR OF sevensegmentdecoder IS
+
+BEGIN
+
+HEX0(0)<= (not(c1) ) AND c2;
+HEX0(1)<= ((not (c1)) AND (not (c2))) OR ((c1) AND (not (c2)));
+HEX0(2)<= ((not (c1)) AND (not (c2))) OR ((c1) AND (not (c2)));
+HEX0(3)<= ((not (c1)) AND (not (c2))) OR ((not(c1)) AND (c2));
+HEX0(4)<= ((not (c1)) AND (not (c2))) OR ((not(c1)) AND (c2));
+HEX0(5)<= (not(c1) ) AND c2;
+HEX0(6)<= ((not (c1)) AND (not (c2))) OR ((not(c1)) AND (c2));
+
+
+
+END BEHAVIOR;

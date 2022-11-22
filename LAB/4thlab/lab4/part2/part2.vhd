@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use IEEE.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+entity part2 is
+port	(	Q	: out std_logic_vector (15 downto 0);
+			HEX0, HEX1, HEX2, HEX3	:	out std_logic_vector (6 downto 0);
+			Clk, Rst	: in std_logic);
+end part2;
+
+architecture arch of part2  is
+	component adder port ( a,b,carry : in std_logic;
+					s,c :out std_logic);
+	end component;
+	component binaryToHexConverter is
+	port	( B	:	in	std_logic_vector(3 downto 0);
+				HEX:	out	std_logic_vector(6 downto 0));
+	end component;
+	signal Qtemp	:	std_logic_vector (15 downto 0);
+begin
+	process(Rst, Clk) 
+	begin
+		if Rst = '0' then
+			Qtemp <= "0000000000000000";
+			Q <= Qtemp;
+		elsif (Clk'event and Clk = '1') then
+			Qtemp <= Qtemp + "0000000000000001";
+			Q <= Qtemp + "0000000000000001";
+		end if;
+	end process;
+	disp0 : binaryToHexConverter port map (Qtemp(3 downto 0), HEX0);
+	disp1 : binaryToHexConverter port map (Qtemp(7 downto 4), HEX1);
+	disp2 : binaryToHexConverter port map (Qtemp(11 downto 8), HEX2);
+	disp3 : binaryToHexConverter port map (Qtemp(15 downto 12), HEX3);
+end arch;

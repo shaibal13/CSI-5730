@@ -1,0 +1,57 @@
+# Reading pref.tcl
+# do sum_of_minterms_using_decoder_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Students/Desktop/Shaibal/mid1_lab/sum_of_minterms_using_decoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:52:55 on Oct 18,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/Students/Desktop/Shaibal/mid1_lab/sum_of_minterms_using_decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity sum_of_minterms_using_decoder
+# -- Compiling architecture Behavior of sum_of_minterms_using_decoder
+# -- Compiling entity three_to_eight_decoder
+# -- Compiling architecture Behavior of three_to_eight_decoder
+# End time: 02:52:55 on Oct 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Students/Desktop/Shaibal/mid1_lab/function_test.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:52:55 on Oct 18,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/Students/Desktop/Shaibal/mid1_lab/function_test.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity function_test
+# -- Compiling architecture test of function_test
+# -- Loading entity sum_of_minterms_using_decoder
+# End time: 02:52:55 on Oct 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  function_test
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" function_test 
+# Start time: 02:52:55 on Oct 18,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.function_test(test)
+# Loading work.sum_of_minterms_using_decoder(behavior)
+# Loading work.three_to_eight_decoder(behavior)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 03:17:09 on Oct 18,2022, Elapsed time: 0:24:14
+# Errors: 0, Warnings: 0

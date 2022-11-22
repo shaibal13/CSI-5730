@@ -1,0 +1,42 @@
+|part2
+D => d_flipflop:d1.D
+D => positiveedge_flipflop:d2.D
+D => negativeedge_flipflop:d3.D
+Clk => d_flipflop:d1.Clk
+Clk => positiveedge_flipflop:d2.Clk
+Clk => negativeedge_flipflop:d3.Clk
+Qa << d_flipflop:d1.Q
+Qa_bar << d_flipflop:d1.Q_bar
+Qb << positiveedge_flipflop:d2.Q
+Qb_bar << positiveedge_flipflop:d2.Q_bar
+Qc << negativeedge_flipflop:d3.Q
+Qc_bar << negativeedge_flipflop:d3.Q_bar
+
+
+|part2|d_flipflop:d1
+D => Q$latch.DATAIN
+D => Q_bar$latch.DATAIN
+Clk => Q_bar$latch.LATCH_ENABLE
+Clk => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|positiveedge_flipflop:d2
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+Clk => Q_bar~reg0.CLK
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|negativeedge_flipflop:d3
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+Clk => Q_bar~reg0.CLK
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

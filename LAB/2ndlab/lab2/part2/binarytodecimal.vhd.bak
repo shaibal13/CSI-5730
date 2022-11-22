@@ -1,0 +1,14 @@
+-- Problem no 2
+-- Developer: Shaibal Saha
+--EMail :shaibalsaha@oakland.edu
+
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY binarytodecimal Is
+	PORT(
+		SW: IN STD_LOGIC_VECTOR(0 TO 3);
+		HEX0,HEX1: OUT STD_LOGIC_VECTOR(0 TO 6)
+	);
+
+END binarytodecimal

@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, output_files/function_test.vhd
+source_file = 1, C:/Users/Students/Desktop/Shaibal/mid1_lab/sum_of_minterms_using_decoder.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = sum_of_minterms_using_decoder
+instance = comp, \f~output\, f~output, sum_of_minterms_using_decoder, 1
+instance = comp, \w[2]~input\, w[2]~input, sum_of_minterms_using_decoder, 1
+instance = comp, \w[0]~input\, w[0]~input, sum_of_minterms_using_decoder, 1
+instance = comp, \w[1]~input\, w[1]~input, sum_of_minterms_using_decoder, 1
+instance = comp, \f~0\, f~0, sum_of_minterms_using_decoder, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, sum_of_minterms_using_decoder, 1

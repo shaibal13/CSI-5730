@@ -1,0 +1,135 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Students/Desktop/Shaibal/mid1_lab/simulation/modelsim
+Efunction_test
+Z1 w1666075947
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8C:/Users/Students/Desktop/Shaibal/mid1_lab/function_test.vhd
+Z5 FC:/Users/Students/Desktop/Shaibal/mid1_lab/function_test.vhd
+l0
+L12 1
+VlE@=VNB[zI=LGoY>UjB4m1
+!s100 _o]gK>GPFYAB=fK@5Z_@_1
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1666075975
+!i10b 1
+Z8 !s108 1666075975.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Students/Desktop/Shaibal/mid1_lab/function_test.vhd|
+!s107 C:/Users/Students/Desktop/Shaibal/mid1_lab/function_test.vhd|
+!i113 1
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Atest
+Z12 DEx4 work 29 sum_of_minterms_using_decoder 0 22 Ylf5DRoaccHzelY4edSaT0
+R2
+R3
+DEx4 work 13 function_test 0 22 lE@=VNB[zI=LGoY>UjB4m1
+!i122 1
+l20
+L15 13
+V@cUCWa=jYDLc_]0PIVUk<1
+!s100 mKLejW_029V;TPXKa50z?1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+Z13 !s107 C:/Users/Students/Desktop/Shaibal/mid1_lab/function_test.vhd|
+!i113 1
+R10
+R11
+Esum_of_minterms_using_decoder
+Z14 w1666075848
+R2
+R3
+!i122 0
+R0
+Z15 8C:/Users/Students/Desktop/Shaibal/mid1_lab/sum_of_minterms_using_decoder.vhd
+Z16 FC:/Users/Students/Desktop/Shaibal/mid1_lab/sum_of_minterms_using_decoder.vhd
+l0
+L9 1
+VYlf5DRoaccHzelY4edSaT0
+!s100 Kd8_Q<XiCfdaC1aU@UI9V0
+R6
+31
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Students/Desktop/Shaibal/mid1_lab/sum_of_minterms_using_decoder.vhd|
+Z18 !s107 C:/Users/Students/Desktop/Shaibal/mid1_lab/sum_of_minterms_using_decoder.vhd|
+!i113 1
+R10
+R11
+Abehavior
+R2
+R3
+R12
+!i122 0
+l31
+L18 19
+V@EMaULYhCS2D<L7L91B?Q2
+!s100 W]0NN=<`9JQ73noc_Xom62
+R6
+31
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R10
+R11
+Ethree_to_eight_decoder
+R14
+R2
+R3
+!i122 0
+R0
+R15
+R16
+l0
+L43 1
+Vbn:nzKnlfHH857LAC0:F90
+!s100 g[bCV`@:8USCRe9<G?18S2
+R6
+31
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R10
+R11
+Abehavior
+R2
+R3
+DEx4 work 22 three_to_eight_decoder 0 22 bn:nzKnlfHH857LAC0:F90
+!i122 0
+l53
+L51 16
+V9_M<0fjBTS]nO30]VCZ[X3
+!s100 bTmlRcDR`C9bmWV2AkQAF3
+R6
+31
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R10
+R11

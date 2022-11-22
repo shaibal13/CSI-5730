@@ -1,0 +1,59 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY bcdsum IS
+	port(
+		X: IN STD_LOGIC_VECTOR(3 downto 0);
+		Y: IN STD_LOGIC_VECTOR(3 downto 0);
+		HEX5,HEX3,HEX1,HEX0: OUT STD_LOGIC_VECTOR(0 to 6)
+	
+	);
+
+END bcdsum
+
+ARCHITECTURE behavior of bcdsum IS
+
+BEGIN
+
+
+
+END behavior;
+
+
+
+--7 segment display (0-9)
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY sevensegment IS
+	PORT(c  : IN STD_LOGIC_VECTOR(0 TO 3);
+		     Display : OUT STD_LOGIC_VECTOR(0 TO 6));
+			  
+END sevensegment;
+
+ARCHITECTURE Behavior of sevensegment IS
+
+--Seven segment equation 
+	BEGIN
+		Display(0)<= not((c(0)) OR (c(2)) OR ((c(1)) AND (c(3))) OR ((not(c(1)))
+					AND (not(c(3)))));
+						
+		Display(1)  <= not((NOT(c(1))) OR ((NOT(c(2)) AND NOT(c(3)))) OR (c(2)
+						AND c(3)));
+						
+		Display(2) <=  not(c(1) OR NOT(c(2)) OR c(3));
+		
+		Display(3) <= not((NOT(c(1)) AND NOT(c(3))) OR (c(2) AND (NOT(c(3)))) OR
+						(c(1) AND (NOT(c(2))) AND c(3)) OR (NOT(c(1))
+						AND c(2)) OR (c(0)));
+						
+		Display(4) <= not((NOT(c(1)) AND not(c(3))) OR (c(2) AND (NOT(c(3)))));
+		
+		Display(5) <= not(c(0) OR ((NOT(c(2))) AND (NOT(c(3)))) OR (c(1)
+					  AND (NOT(c(2)))) OR (c(1) AND (NOT( c(3)))));
+						
+		Display(6) <= not(((NOT(c(1))) AND c(2)) OR (c(2) AND (NOT(c(3)))) OR
+						(c(1) AND (NOT(c(2)))) OR c(0));
+					
+END Behavior;

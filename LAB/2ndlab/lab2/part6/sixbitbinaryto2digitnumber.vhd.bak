@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity sixbitbinaryto2digitnumber is
+	port(
+		SW : IN std_logic_vector(5 to 0);
+		HEX1,HEX0 : OUT std_logic_vector(0 to 6)
+	);
+
+
+end sixbitbinaryto2digitnumber;

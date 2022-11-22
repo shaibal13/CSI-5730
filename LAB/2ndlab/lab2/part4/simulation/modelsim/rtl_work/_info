@@ -1,0 +1,114 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Students/Desktop/Shaibal/lab2/part4/simulation/modelsim
+Ebcdsum
+Z1 w1665469340
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/Students/Desktop/Shaibal/lab2/part4/bcdsum.vhd
+Z5 FC:/Users/Students/Desktop/Shaibal/lab2/part4/bcdsum.vhd
+l0
+L10 1
+V[`C_1nJYLTzT8g=04n9bL1
+!s100 PIUQE1d=^30?>IFTAE50f0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1665683391
+!i10b 1
+Z8 !s108 1665683391.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Students/Desktop/Shaibal/lab2/part4/bcdsum.vhd|
+!s107 C:/Users/Students/Desktop/Shaibal/lab2/part4/bcdsum.vhd|
+!i113 1
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+DEx4 work 6 bcdsum 0 22 [`C_1nJYLTzT8g=04n9bL1
+!i122 0
+l62
+L22 63
+VP7jY]B=MU6<IGIi@ihI=P0
+!s100 njRM>R^RhAk@AW8>HXl@@0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 C:/Users/Students/Desktop/Shaibal/lab2/part4/bcdsum.vhd|
+!i113 1
+R10
+R11
+Ebinarytodecimal
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L109 1
+VOY22Z247hHPbTlDFJR`CX1
+!s100 8::b?]GiAkzS8Ai^;jB`o2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R12
+!i113 1
+R10
+R11
+Eerrorcheck
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L90 1
+V]]S<XQ]2mU<DX5d]KDg@@0
+!s100 S:@XJWJVIC72^CUJZ38ld3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R12
+!i113 1
+R10
+R11
+Abehavior
+R2
+R3
+DEx4 work 10 errorcheck 0 22 ]]S<XQ]2mU<DX5d]KDg@@0
+!i122 0
+l97
+L96 6
+V1l2c5OTfTS]<iK?_l8mY42
+!s100 D^mIIGf5`]dPR`dGJQlhh0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R12
+!i113 1
+R10
+R11

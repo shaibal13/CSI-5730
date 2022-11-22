@@ -1,0 +1,5 @@
+fulladder/fa0 --> fa0
+fulladder/fa1 --> fa1
+fulladder/fa2 --> fa2
+fulladder/fa3 --> fa3
+fulladder --> fulladder

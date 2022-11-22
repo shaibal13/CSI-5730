@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity part1 is
+    port (
+        clk:    in  std_logic;
+        reset:  in  std_logic;
+        en:     in  std_logic;
+		  HEX0, HEX1:	out	std_logic_vector(6 downto 0);
+        q:      out std_logic_vector(7 downto 0));
+end entity;
+
+architecture foo of part1 is
+    component tff_noor is
+        port (
+            clk:    in  std_logic;
+            reset:  in  std_logic;
+            t:      in  std_logic;
+            q:      out std_logic);
+    end component;
+	component	binaryToHexConverter is
+	port	( B	:	in	std_logic_vector(3 downto 0);
+				HEX:	out	std_logic_vector(6 downto 0));
+	end component;
+    signal cnt:         std_logic_vector (0 to 7);
+    signal t:           std_logic_vector (0 to 7); 
+begin
+
+    -- The seven AND gates:
+    t <=  (en, en and cnt(0), t(1) and cnt(1), t(2) and cnt(2),
+            t(3) and cnt(3), t(4) and cnt(4), t(5) and cnt(5), t(6) and cnt(6));
+
+--  The eight TFFs:
+TFF_1:	component tff_noor port map (clk => clk, reset => reset,t => t(0),q => cnt(0)); 
+TFF_2:   component tff_noor port map (clk => clk, reset => reset,t => t(1),q => cnt(1));
+TFF_3:	component tff_noor port map (clk => clk, reset => reset,t => t(2),q => cnt(2)); 
+TFF_4:   component tff_noor port map (clk => clk, reset => reset,t => t(3),q => cnt(3));
+TFF_5:	component tff_noor port map (clk => clk, reset => reset,t => t(4),q => cnt(4)); 
+TFF_6:	component tff_noor port map (clk => clk, reset => reset,t => t(5),q => cnt(5)); 
+TFF_7:   component tff_noor port map (clk => clk, reset => reset,t => t(7),q => cnt(7));
+
+    q <= cnt;
+	H0: binaryToHexConverter port map ( t(0 to 3), HEX0);
+	H1: binaryToHexConverter port map ( t(4 to 7), HEX1);
+
+end architecture;
